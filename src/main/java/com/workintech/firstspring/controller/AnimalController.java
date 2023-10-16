@@ -21,7 +21,8 @@ public class AnimalController {
 @PostMapping("/")
     public Animal createAnimal(@RequestBody Animal animal){
 animals.put(animal.getId(),animal);
-return  animal;
+    System.out.println("animal has been added");
+return  animals.get(animal.getId());
 
     }
 
